@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hamid Lohar - Resume</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/github-markdown-css/5.1.0/github-markdown.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/marked/3.0.8/marked.min.js"></script>
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica,
+          Arial, sans-serif;
+        line-height: 1.6;
+        color: #24292e;
+        max-width: 980px;
+        margin: 0 auto;
+      }
+      @media (max-width: 767px) {
+        body {
+          padding: 15px;
+        }
+      }
+      .markdown-body {
+        box-sizing: border-box;
+        min-width: 200px;
+        max-width: 980px;
+        margin: 0 auto;
+        padding: 20px 45px; /* Reduced top and bottom padding */
+        border: 1px solid #e1e4e8;
+        border-radius: 6px;
+      }
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 10px 15px; /* Reduced padding for mobile */
+        }
+      }
+      @media print {
+        body {
+          padding: 0;
+        }
+        .markdown-body {
+          border: none;
+          padding: 0;
+        }
+        @page {
+          size: auto;
+          margin-top: 5mm;
+          margin-bottom: 5mm;
+        }
+        body {
+          margin: 0.5cm;
+        }
+      }
+      /* Add these styles to minimize table padding */
+      .markdown-body table {
+        margin-bottom: 16px;
+      }
+      .markdown-body table th,
+      .markdown-body table td {
+        padding: 4px 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="content" class="markdown-body"></div>
+
+    <script>
+      // Fetch the Markdown content
+      fetch("Resume.md")
+        .then((response) => response.text())
+        .then((markdown) => {
+          // Convert Markdown to HTML
+          const html = marked.parse(markdown);
+          // Insert the HTML into the page
+          document.getElementById("content").innerHTML = html;
+        })
+        .catch((error) => {
+          console.error("Error fetching or parsing Markdown:", error);
+          document.getElementById("content").innerHTML =
+            "<p>Error loading resume content.</p>";
+        });
+    </script>
+  </body>
+</html>
