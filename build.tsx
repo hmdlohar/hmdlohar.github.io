@@ -13,8 +13,12 @@ if (process.argv.includes("--serve")) {
     async fetch(req) {
       let path = new URL(req.url).pathname;
       if (path.endsWith("/")) path += "index.html";
-      const file = Bun.file("dist" + path);
-      return (await file.exists()) ? new Response(file) : new Response("Not found", { status: 404 });
+      // public/ first, so edits there show without a rebuild (--watch only sees imported modules)
+      for (const dir of ["public", "dist"]) {
+        const file = Bun.file(dir + path);
+        if (await file.exists()) return new Response(file);
+      }
+      return new Response("Not found", { status: 404 });
     },
   });
   console.log(`serving ${server.url}`);
