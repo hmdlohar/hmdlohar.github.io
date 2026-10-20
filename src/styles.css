@@ -1,0 +1,26 @@
+@import "tailwindcss";
+
+@theme {
+  --color-paper: #f2f0eb;
+  --color-ink: #0e0e0e;
+  --color-sun: #ffd400;
+  --color-blue: #2541ff;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+  --default-border-color: var(--color-ink);
+  --animate-marquee: marquee 40s linear infinite;
+
+  @keyframes marquee {
+    to { transform: translateX(-50%); }
+  }
+}
+
+@layer base {
+  *, ::before, ::after { border-color: var(--color-ink); }
+  html { scroll-behavior: smooth; }
+  html, body { overflow-x: clip; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .animate-marquee { animation: none; }
+}
