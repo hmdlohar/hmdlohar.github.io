@@ -1,0 +1,3 @@
+[run]
+# run package bins (e.g. tailwindcss) with Bun instead of their node shebang
+bun = true

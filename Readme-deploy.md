@@ -1,1 +1,0 @@
-This project will be automatically deployed to GitHub Pages when a push is made to the `main` branch.
