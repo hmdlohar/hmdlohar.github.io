@@ -42,7 +42,7 @@ export const stats = [
 
 export const stack = [
   "React", "NextJS", "TypeScript", "Node.js", "MongoDB", "PostgreSQL",
-  "AWS", "RunPod", "Stripe", "AI Agents", "Puppeteer", "Electron", "Docker",
+  "AWS", "Google Cloud", "RunPod", "Stripe", "AI Agents", "Puppeteer", "Electron", "Docker",
 ];
 
 export const projects: Project[] = [
@@ -54,6 +54,15 @@ export const projects: Project[] = [
       "Generative AI fashion platform. Autoscaled GPU workloads across RunPod and AWS, migrated payments from Razorpay to Stripe with subscriptions, and built an image-to-video AI agent on a template architecture.",
     tags: ["RunPod", "AWS", "Stripe", "AI Agents"],
     metric: { value: "−50%", label: "GPU cost" },
+  },
+  {
+    name: "QuickBooks Bots",
+    org: "Apex Hospitality Management",
+    period: "2026",
+    summary:
+      "Bots that post journal and check entries into QuickBooks, alongside multi-state and county tax-filing bots and bank statement downloaders, all deployed on Google Cloud.",
+    tags: ["RPA", "QuickBooks", "Google Cloud"],
+    metric: { value: "1 click", label: "Monthly journal, 100s of lines" },
   },
   {
     name: "Tax Robot",
@@ -121,7 +130,11 @@ export const jobs: Job[] = [
     role: "Freelance Full Stack Developer",
     company: "Apex Hospitality Management LLC",
     period: "Jan 2026 — Now",
-    points: ["Desktop RPA automation and automated financial analysis systems."],
+    points: [
+      "Turned a monthly journal of hundreds of lines into one click with QuickBooks bots for journal and check entries.",
+      "Eliminated manual tax filing across multiple states and counties, and manual bank statement downloads, with RPA bots on Google Cloud.",
+      "Doubled delivery speed with better code quality through an AI-driven development workflow.",
+    ],
   },
   {
     role: "Senior Fullstack Engineer",
@@ -171,8 +184,8 @@ export const skills = [
   { group: "Frontend", items: ["React", "NextJS", "TypeScript", "JavaScript", "HTML / CSS"] },
   { group: "Backend", items: ["Node.js", "Express", "NestJS", "ASP.NET", "Stripe", "REST APIs"] },
   { group: "Data", items: ["MongoDB", "PostgreSQL", "MySQL", "SQL Server"] },
-  { group: "Cloud & DevOps", items: ["AWS", "RunPod / GPU", "Docker", "GitHub Actions", "Firebase"] },
-  { group: "AI & Automation", items: ["Generative AI", "AI Agents", "Puppeteer", "Electron", "PDF parsing"] },
+  { group: "Cloud & DevOps", items: ["AWS", "Google Cloud", "RunPod / GPU", "Docker", "GitHub Actions", "Firebase"] },
+  { group: "AI & Automation", items: ["AI-driven development", "Claude Code", "OpenCode", "Codex", "Generative AI", "AI Agents", "RPA bots", "QuickBooks automation", "Puppeteer", "Electron", "PDF parsing"] },
   { group: "Mobile", items: ["Cordova", "Ionic", "Hybrid apps"] },
 ];
 
