@@ -158,10 +158,13 @@ export const jobs: Job[] = [
     ],
   },
   {
-    role: "Freelance Full Stack Developer",
-    company: "10+ clients",
+    role: "Co-founder & CTO",
+    company: "The Hyper Tech",
     period: "Jun 2019 — Aug 2023",
-    points: ["Fintech, e-commerce, tourism and mobile apps. Most of the projects above come from this period."],
+    points: [
+      "Co-founded and led an engineering team, peaking at 10 people and later running project squads of 2–4.",
+      "10+ clients across fintech, e-commerce, tourism and mobile apps. Most of the projects above come from this period.",
+    ],
   },
   {
     role: "Web Developer",
